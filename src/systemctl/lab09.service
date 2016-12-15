@@ -1,0 +1,14 @@
+[Unit]
+Description=Daemon for Lab09
+Documentation=
+After=network.target
+
+[Service]
+Type=forking
+User=kvlinden
+Group=kvlinden
+ExecStart=/usr/bin/screen -S lab09 -d -m /var/cs262/Lab09/src/systemctl/startService.sh
+ExecStop=/var/cs262/Lab09/src/systemctl/stopService.sh
+
+[Install]
+WantedBy=multi-user.target

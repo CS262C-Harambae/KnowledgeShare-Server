@@ -1,0 +1,14 @@
+To start this REST service from the current command line, run these commands at the root of the Intellij project root.
+- On Windows
+"C:\Program Files\PostgreSQL\9.4\bin\postgres" -D "C:\Program Files\PostgreSQL\9.4\data"
+"C:\Program Files\Java\jdk1.7.0_79\bin\java" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Java\jdk1.7.0_79\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_79\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.7.0_79\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.7.0_79\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_79\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_79\jre\lib\jfxrt.jar;C:\Program Files\Java\jdk1.7.0_79\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_79\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.7.0_79\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.7.0_79\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_79\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_79\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.7.0_79\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.7.0_79\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.7.0_79\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.7.0_79\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.7.0_79\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.7.0_79\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.7.0_79\jre\lib\ext\zipfs.jar;D:\projects\cs262\cs262-applications\Lab09\out\production\Lab09;D:\projects\cs262\cs262-applications\Lab09\lib\asm-3.3.1.jar;D:\projects\cs262\cs262-applications\Lab09\lib\jersey-client-1.12.jar;D:\projects\cs262\cs262-applications\Lab09\lib\jersey-grizzly-1.12.jar;D:\projects\cs262\cs262-applications\Lab09\lib\jersey-multipart-1.12.jar;D:\projects\cs262\cs262-applications\Lab09\lib\jersey-core-1.12.jar;D:\projects\cs262\cs262-applications\Lab09\lib\jersey-bundle-1.12.jar;D:\projects\cs262\cs262-applications\Lab09\lib\gson-2.6.2.jar;D:\projects\cs262\cs262-applications\Lab09\lib\postgresql-9.4-1201.jdbc4.jar;D:\projects\cs262\cs262-applications\Lab09\lib\javax.ws.rs-api-2.0.jar;C:\Program Files (x86)\JetBrains\IntelliJ IDEA 2016.1.2\lib\idea_rt.jar" edu.calvin.cs262.MonopolyResource
+- On Linux
+./startService.sh
+
+To start this REST service as a system service:
+See these scripts in /var/cs262/Lab09/src/manual2/
+- env.sh – this is a central spot to adjust the project name, and the project base directory.
+- start-java.sh – this should be where you have to tweak what java programs are called (which should have the port assigned hard-coded into them.)
+- start.sh - This imports env.sh and start-java.sh and starts the service appropriately.
+- stop.sh - This stops the service.
+Note: a single user can only run one instance of this startup script with the same Name.  If you make a copy of the scripts and change the name variable in env.sh, then you’ll be able to run a second instance of the script (assuming the code being run is running on another port).

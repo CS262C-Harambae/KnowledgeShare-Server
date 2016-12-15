@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="jax-rs-jersey-1.12" type="JAX-RS">
+    <properties version="jersey-1.12" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/asm-3.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jersey-client-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jersey-grizzly-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jersey-multipart-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jersey-core-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jersey-bundle-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/gson-2.6.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/postgresql-9.4-1201.jdbc4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javax.ws.rs-api-2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
